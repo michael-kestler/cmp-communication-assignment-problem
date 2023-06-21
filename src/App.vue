@@ -5,7 +5,7 @@
     <ul>
         <active-user>
             v-for="user in users"
-            :key = "id"
+            :key = "user.id"
             :id = "user.id"
             :userName: "user.userName"
             :age="user.age"
