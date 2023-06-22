@@ -8,10 +8,6 @@
 <script>
 export default{
     props: {
-        id:{
-            type: String,
-            required: true
-        },
         userName: {
             type: String,
             required: true
@@ -26,12 +22,10 @@ export default{
         return{
                 users: [
                     {
-                        id: '001',
                         userName: 'jsmith22',
                         age: '25'
                     },
                     {
-                        id: '002',
                         userName:'astanwyck',
                         age: '33'
                     }

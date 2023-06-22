@@ -7,12 +7,8 @@
      <!-- <input type="text" placeholder="Name"/>
     <input type="text" placeholder="Age"/>  -->
     <ul>
-        <active-user>
-            v-for="user in users"
-            :key = "user.id"
-            :id = "user.id"
-            :userName: "user.userName"
-            :age="user.age"
+        <active-user :userName="users.userName" :age="users.age">
+         
         </active-user>
 
         <user-data>
@@ -30,12 +26,10 @@ import ActiveUser from './components/ActiveUser.vue';
             return{
                 users: [
                     {
-                        id: '001',
                         userName: 'jsmith22',
                         age: '25'
                     },
                     {
-                        id: '002',
                         userName:'astanwyck',
                         age: '33'
                     }
@@ -45,14 +39,14 @@ import ActiveUser from './components/ActiveUser.vue';
 
 
         methods: {
-            addUser(userName, age){
-                const newUser = {
-                    id: new Date().toISOString,
-                    userName: userName,
-                    age: age,
-                }
-                 this.users.push(newUser)
-            }
+            // addUser(userName, age){
+            //     const newUser = {
+            //         id: new Date().toISOString,
+            //         userName: userName,
+            //         age: age,
+            //     }
+            //      this.users.push(newUser)
+            // }
         }
 
        
