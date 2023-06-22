@@ -1,7 +1,9 @@
 <template>
 <section>
     <header><h1>Users</h1></header>
-    <new-user @add-user="addUser"></new-user>
+    <!-- <new-user @add-user="addUser"></new-user> -->
+    <h2>UserName: {{userName}}</h2>
+    <h3>Age: {{age}}</h3>
     <ul>
         <active-user>
             v-for="user in users"
@@ -10,6 +12,10 @@
             :userName: "user.userName"
             :age="user.age"
         </active-user>
+
+        <!-- <user-data>
+            v-for="user"
+        </user-data> -->
     </ul>
 </section>
 </template>
@@ -17,8 +23,8 @@
 <script>
 import ActiveUser from './components/ActiveUser.vue';
     export default{
-  components: { ActiveUser },
-        data(){
+  components: { ActiveUser},
+        data() {
             return{
                 users: [
                     {
@@ -32,8 +38,9 @@ import ActiveUser from './components/ActiveUser.vue';
                         age: '33'
                     }
                 ],
-            };
+            }
         },
+
 
         methods: {
             addUser(userName, age){
