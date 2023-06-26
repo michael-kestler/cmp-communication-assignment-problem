@@ -7,7 +7,7 @@
      <!-- <input type="text" placeholder="Name"/>
     <input type="text" placeholder="Age"/>  -->
     <ul>
-        <active-user :userName="users.userName" :age="users.age">
+        <active-user :username="users.name" :age="users.age">
          
         </active-user>
 
@@ -19,35 +19,27 @@
 </template>
 
 <script>
-import ActiveUser from './components/ActiveUser.vue';
     export default{
-  components: { ActiveUser },
         data() {
             return{
-                users: [
-                    {
-                        userName: 'jsmith22',
-                        age: '25'
-                    },
-                    {
-                        userName:'astanwyck',
-                        age: '33'
-                    }
-                ],
+                users: {
+                    name: 'Michael Kestler',
+                    age: '39'
+                }
             }
         },
 
 
-        methods: {
-            // addUser(userName, age){
-            //     const newUser = {
-            //         id: new Date().toISOString,
-            //         userName: userName,
-            //         age: age,
-            //     }
-            //      this.users.push(newUser)
-            // }
-        }
+        // methods: {
+        //     // addUser(userName, age){
+        //     //     const newUser = {
+        //     //         id: new Date().toISOString,
+        //     //         userName: userName,
+        //     //         age: age,
+        //     //     }
+        //     //      this.users.push(newUser)
+        //     // }
+        // }
 
        
 
