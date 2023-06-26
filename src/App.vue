@@ -11,7 +11,7 @@
          
         </active-user>
 
-        <user-data>
+        <user-data @set-data="setUserData">
            
         </user-data>
     </ul>
@@ -30,16 +30,14 @@
         },
 
 
-        // methods: {
-        //     // addUser(userName, age){
-        //     //     const newUser = {
-        //     //         id: new Date().toISOString,
-        //     //         userName: userName,
-        //     //         age: age,
-        //     //     }
-        //     //      this.users.push(newUser)
-        //     // }
-        // }
+        methods: {
+            setUserData(name, age){
+                this.users = {
+                    name: name,
+                    age: age
+                }
+            }
+        }
 
        
 
